@@ -12,8 +12,7 @@ public class QuickSort{
 		while(true){
 			while(i<hi&&nums[++i]<nums[lo]);
 			while(j>lo&&nums[--j]>nums[lo]);
-			if(i>=j)
-				break;
+			if(i>=j)break;
 			int temp=nums[i];
 			nums[i]=nums[j];
 			nums[j]=temp;
@@ -30,7 +29,7 @@ public class QuickSort{
 			return;
 		int i=lo,lt=lo,gt=hi;
 		int v=nums[lo];
-		while(i<=gt){
+		while(i<gt){
 			if(nums[i]<v){
 				int temp=nums[i];
 				nums[i]=nums[lt];
@@ -51,7 +50,7 @@ public class QuickSort{
 	}
 	public static void main(String []args){
 		QuickSort q=new QuickSort();
-		int []nums={1,0,0,0,0,0,0,0,1};
+		int []nums={55};
 		q.quickSort(nums,0,nums.length-1);
 		for(int i:nums)
 			System.out.println(i+"  nums");
